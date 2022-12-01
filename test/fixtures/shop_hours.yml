@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shop: one
+  day_of_week: 1
+  start_at: 2022-12-01 16:38:28
+  end_at: 2022-12-01 16:38:28
+
+two:
+  shop: two
+  day_of_week: 1
+  start_at: 2022-12-01 16:38:28
+  end_at: 2022-12-01 16:38:28
