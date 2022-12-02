@@ -1,24 +1,21 @@
-# README
+## Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Ruby 3.1.2 
+#### Rails 7.0.4
 
-Things you may want to cover:
+```sh
+git clone https://github.com/Francois973/shops-hours.git
+```
 
-* Ruby version
+```sh
+bundle install
+```
 
-* System dependencies
+```sh
+rails server
+```
 
-* Configuration
 
-* Database creation
+## Starting 🚀
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Start [https://localhost:3000](https://localhost:3000) 💎
