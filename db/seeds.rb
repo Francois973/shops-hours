@@ -35,4 +35,5 @@ shop.shop_hours.create(day_of_week: 4,
 shop.shop_hours.create(day_of_week: 5,
                        range_hours: [{ start_at: Time.utc(2000, 'jan', 1, 10, 30),
                                        end_at: Time.utc(2000, 'jan', 1, 20, 0o0) }])
-shop.shop_hours.create(day_of_week: 6, range_hours: [])
+shop.shop_hours.create(day_of_week: 6, range_hours: [{ start_at: '0',
+                                                       end_at: '0' }])
