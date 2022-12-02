@@ -4,7 +4,18 @@
   <% @shops.each do |shop| %>
       <p><%= t("hours") %> :</p>
     <div class="container">
+      <% day = Date.current.strftime("%A").downcase %>
       <% shop.shop_hours.each do |hour| %>
+        <%= next unless hour.day_of_week == day %>
+        <div class="shop-hours <%= strongify(t("day.#{hour.day_of_week.to_s}")) ? 'bold-day' : '' %>">
+          <li><%= t("day.#{hour.day_of_week.to_s}") %></li>
+          <% hour.range_hours.each do |range| %>
+            <%= display_hours_of_each_shop(range) %>
+          <% end %>
+        </div>
+      <% end %>
+      <% shop.shop_hours.each do |hour| %>
+        <%= next if hour.day_of_week == day %>
         <div class="shop-hours <%= strongify(t("day.#{hour.day_of_week.to_s}")) ? 'bold-day' : '' %>">
           <li><%= t("day.#{hour.day_of_week.to_s}") %></li>
           <% hour.range_hours.each do |range| %>

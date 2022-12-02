@@ -3,11 +3,11 @@ class Shop < ApplicationRecord
 
   validates :name, presence: true
 
-  validate :sort_with_day_today_first
+  validate :current_day_to
 
   private
 
-  def sort_with_day_today_first
-    shop_hours.sort_by { |day| day.day_of_week == Date.today.strftime('%A') }
+  def current_day_to
+    shop_hours.order('day_of_week = ?')
   end
 end
