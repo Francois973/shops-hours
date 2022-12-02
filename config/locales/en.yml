@@ -37,8 +37,16 @@ en:
   day:
     monday: "Monday"
     tuesday: "Tuesday"
-    Wednesday: "Wednesday"
+    wednesday: "Wednesday"
     thursday: "Thursday"
     friday: "Friday"
     saturday: "Saturday"
     sunday: "Sunday"
+  jour:
+    lundi: "Monday"
+    mardi: "Tuesday"
+    mercredi: "Wednesday"
+    jeudi: "Thursday"
+    vendredi: "Friday"
+    samedi: "Saturday"
+    dimanche: "Sunday"

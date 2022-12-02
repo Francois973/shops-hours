@@ -1,14 +1,14 @@
 <h1>Shop</h1>
 
 <ul>
-  <% @shops.each do |s| %>
+  <% @shops.each do |shop| %>
       <p><%= t("hours") %> :</p>
     <div class="container">
-      <% s.shop_hours.each do |d| %>
-        <div class="shop-hours">
-          <li><%= t("day.#{d.day_of_week}") %></li>
-          <% d.range_hours.each do |r| %>
-              <%= r['start_at'] == "0" || r['end_at'] == nil ? "Closed" : "#{l(r['start_at'].to_time)} - #{l(r['end_at'].to_time)}" %>
+      <% shop.shop_hours.each do |hour| %>
+        <div class="shop-hours <%= strongify(t("day.#{hour.day_of_week.to_s}")) ? 'bold-day' : '' %>">
+          <li><%= t("day.#{hour.day_of_week.to_s}") %></li>
+          <% hour.range_hours.each do |range| %>
+            <%= display_hours_of_each_shop(range) %>
           <% end %>
         </div>
       <% end %>
