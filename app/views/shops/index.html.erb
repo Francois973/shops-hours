@@ -2,15 +2,13 @@
 
 <ul>
   <% @shops.each do |s| %>
-    <div class="container">
       <p><%= t("hours") %> :</p>
+    <div class="container">
       <% s.shop_hours.each do |d| %>
         <div class="shop-hours">
           <li><%= t("day.#{d.day_of_week}") %></li>
           <% d.range_hours.each do |r| %>
-            <div class="hours">
               <%= r['start_at'] == "0" || r['end_at'] == nil ? "Closed" : "#{l(r['start_at'].to_time)} - #{l(r['end_at'].to_time)}" %>
-            </div>
           <% end %>
         </div>
       <% end %>
