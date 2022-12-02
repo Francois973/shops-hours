@@ -1,0 +1,13 @@
+fr:
+  hours: "Horaires"
+  time:
+    formats:
+      default: "%H:%M"
+  day:
+    monday: "Lundi"
+    tuesday: "Mardi"
+    wednesday: "Mercredi"
+    thursday: "Jeudi"
+    friday: "Vendredi"
+    saturday: "Samedi"
+    sunday: "Dimanche"

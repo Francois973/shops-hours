@@ -30,4 +30,15 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hours: "Hours"
+  time:
+    formats:
+      default: '%I.%m %p'
+  day:
+    monday: "Monday"
+    tuesday: "Tuesday"
+    Wednesday: "Wednesday"
+    thursday: "Thursday"
+    friday: "Friday"
+    saturday: "Saturday"
+    sunday: "Sunday"
