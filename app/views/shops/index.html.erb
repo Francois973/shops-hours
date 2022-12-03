@@ -1,8 +1,8 @@
 <h1>Shop</h1>
 
 <ul>
+  <p><%= t("hours") %> :</p>
   <% @shops.each do |shop| %>
-      <p><%= t("hours") %> :</p>
     <div class="container">
       <% day = Date.current.strftime("%A").downcase %>
       <% shop.shop_hours.each do |hour| %>
