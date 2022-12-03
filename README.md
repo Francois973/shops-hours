@@ -10,7 +10,7 @@ After much thought and research, the only way I found was to create a ```range_h
 range_hours : { 'start_at' => '2000-01-01T10:30:00.000Z', 'end_at' => '2000-01-01T15:00:00.000Z' } # json
 ```
 
-I also added a "day_of_week" attribute to associate times with a day of the week.  I wanted to put it as an "enum" to be able to rotate it throughout the week. 
+I also added a "day_of_week" attribute to associate times with a day of the week.  I wanted to put it as an "enum" to be able to rotate it throughout the week. However, I haven't figured out how to play with the numbers yet. 
 
 ## Installation
 
