@@ -8,7 +8,7 @@ class ShopTest < ActiveSupport::TestCase
   end
 
   test 'invalid without name' do
-    shop = Shop.create(name: '')
+    shop = Shop.create
 
     refute shop.valid?
   end
