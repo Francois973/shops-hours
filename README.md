@@ -16,6 +16,7 @@ I also added a "day_of_week" attribute to associate times with a day of the week
 
 #### Ruby 3.1.2 
 #### Rails 7.0.4
+#### Psql 14.5
 
 ```sh
 git clone https://github.com/Francois973/shops-hours.git
