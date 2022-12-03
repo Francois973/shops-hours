@@ -1,28 +1,2 @@
 <h1>Shop</h1>
-
-<ul>
-  <p><%= t("hours") %> :</p>
-  <% @shops.each do |shop| %>
-    <div class="container">
-      <% day = Date.current.strftime("%A").downcase %>
-      <% shop.shop_hours.each do |hour| %>
-        <%= next unless hour.day_of_week == day %>
-        <div class="shop-hours <%= bold_class_current_day_hours(t("day.#{hour.day_of_week.to_s}")) %>">
-          <li><%= t("day.#{hour.day_of_week.to_s}") %></li>
-          <% hour.range_hours.each do |range| %>
-            <%= display_hours_of_each_shop(range) %>
-          <% end %>
-        </div>
-      <% end %>
-      <% shop.shop_hours.each do |hour| %>
-        <%= next if hour.day_of_week == day %>
-        <div class="shop-hours <%= bold_class_current_day_hours(t("day.#{hour.day_of_week.to_s}")) %>">
-          <li><%= t("day.#{hour.day_of_week.to_s}") %></li>
-          <% hour.range_hours.each do |range| %>
-            <%= display_hours_of_each_shop(range) %>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-<% end %>
-</ul>
+<%= render 'shared/shops' %>
