@@ -2,7 +2,7 @@
 
 I started by thinking about the structure of the database. I first created the Shop model with its "name" attribute. 
 
-I thought that a shop had ```has_many``` hours: so I created a join table ```ShopHour```. However, I didn't know how to store time slots efficiently in the db (the difficulty is to return times in the form: ```Monday 10:30am - 3:00pm 5:00pm - 8:00pm)```. 
+I thought that a shop had ```has_many``` hours: so I created a join table ```ShopHour```. However, I didn't know how to store time slots efficiently in the db (the difficulty is to return times in the form: ```Monday 10:30am - 3:00pm 5:00pm - 8:00pm```). 
 
 After much thought and research, the only way I found was to create a ```range_hours``` attribute in json format in the ```ShopHour``` model and store a shop's hours as
  
